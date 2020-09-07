@@ -1,12 +1,30 @@
-(require 'dired-x)
-(require 'helm)
+(require 'package)
 
+;; The Package Manager
+;; M-x eval-buffer
+;; M-x package-list-packages
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+	("marmalade" . "http://marmalade-repo.org/packages/")
+	("melpa" . "http://melpa.org/packages/")))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+;; (package-refresh-contents)
+
+;; Download Evil
+;; (unless (package-installed-p 'evil)
+;;  (package-install 'evil))
+
+;; Enable
+(require 'evil)
+(evil-mode 1)
+
+(require 'dired-x)
+(require 'helm)
 
 (ido-mode 1)
 (setq ido-everywhere t)
@@ -20,13 +38,6 @@
 ;; to bind Imenu to M-i
 (global-set-key (kbd "M-i") 'imenu)
 
-;; The Package Manager
-;; M-x eval-buffer
-;; M-x package-list-packages
-(setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-	("marmalade" . "http://marmalade-repo.org/packages/")
-	("melpa" . "http://melpa.org/packages/")))
 
 ;; Add this to your init file to switch to Hippie Expand:
 (global-set-key [remap dabbrev-expand] 'hippie-expand)
