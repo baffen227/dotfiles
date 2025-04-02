@@ -10,14 +10,14 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-      "ctrl-s": ["workspace::SendKeystrokes", "escape ctrl-alt-s"]
+      "ctrl-s": ["workspace::SendKeystrokes", "escape ctrl-alt-s"],
+      "space f": "file_finder::Toggle"
     }
   },
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space ?": "zed::OpenKeymap",
-      "space f": "file_finder::Toggle",
       "space s": "project_symbols::Toggle",
       "space e": "workspace::ToggleLeftDock",
       "space +": "pane::SplitVertical",
