@@ -1,0 +1,36 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // The name of a font to use for rendering text in the editor
+  "icon_theme": "Catppuccin Macchiato",
+  "buffer_font_family": "Hack Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato"
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "cargo": {
+          "features": "all",
+          // "features": ["backend", "wasm-http-client", "native-http-client"],
+          "extraEnv": {
+            "TEST_CI_BACKEND_URL": "http://127.0.0.1:8080"
+          }
+        },
+        "checkOnSave": false
+      }
+    }
+  }
+}
