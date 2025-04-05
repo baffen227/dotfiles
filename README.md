@@ -1,20 +1,20 @@
+# Backup nix configuration files
+```bash
+sudo mv /etc/nixos/configuration.nix /etc/nixos/configuration_backup.nix
+sudo mv /etc/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration_backup.nix
+```
+
 # A sample invocation of GNU Stow config files:
 ```bash
-stow -d ~/dotfiles/dots --dotfiles --target ~ zed
+sudo stow -d ~/dotfiles --dotfiles --target / echoes
 ```
 
 # Removing the symlinks is as simple as:
 ```bash
-stow -D -d ~/dotfiles/dots --dotfiles --target ~ zed
+sudo stow -D -d ~/dotfiles --dotfiles --target / echoes
 ```
 
 # Host `echoes` is a laptop "Dell Vostro 5410".
-```bash
-# Create symbolic links
-sudo stow -d ~/dotfiles --dotfiles --target / echoes
-# Remove symbolic links
-sudo sudo stow -d ~/dotfiles --dotfiles --target / echoes
-```
 ![image](https://github.com/user-attachments/assets/0436c971-236b-41be-ad7b-fc13cdfaa38b)
 
 
