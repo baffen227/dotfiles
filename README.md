@@ -1,7 +1,7 @@
 A sample invocation of GNU Stow with the zed config files:
 ```bash
 stow -d ~/dotfiles/dots --dotfiles --target ~ zed
-stow -d ~/dotfiles/hosts --dotfiles --target / echoes
+sudo stow -d ~/dotfiles/hosts --dotfiles --target / echoes
 ```
 
 Removing the symlinks is as simple as:
