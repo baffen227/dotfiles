@@ -14,11 +14,15 @@ sudo stow -d ~/dotfiles --dotfiles --target / echoes
 
 
 # NixOS
-NOTE: I ignored the following step for tracing my hardware-configuration.nix for now.
 
 Before installation, run these lines:
 ```bash
+# NOTE: I ignored the following step for tracing my hardware-configuration.nix for now.
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+
+# for unstable zeditor
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+
 sudo nix-channel --update
 ```
 
