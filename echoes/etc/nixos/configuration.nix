@@ -8,11 +8,7 @@
 {
   imports =
     [
-      # List packages installed in system profile. To search, run:
-      # $ nix search wget
       ./packages
-
-      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 

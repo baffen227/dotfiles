@@ -7,6 +7,7 @@
     ./editors.nix
     ./fonts.nix
     ./gnome.nix
+    ./tools.nix
   ];
 
   # Allow non-free packages

@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    ttf-tw-moe # Set of KAI and SONG fonts from the Ministry of Education of Taiwan
+  ];
+
   # For fine grained Font control (can set a font per language!) see: https://nixos.wiki/wiki/Fonts
   fonts = {
     fontDir.enable = true;

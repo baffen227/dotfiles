@@ -119,13 +119,53 @@
     };
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
+    cowsay # Program which generates ASCII pictures of a cow with a message
+    eza # Modern, maintained replacement for ls
+    file # Program that shows the type of files
+    fzf # Command-line fuzzy finder written in Go
+    gawk # GNU implementation of the Awk programming language
     git
-    stow
-    tree
+    gnused # GNU sed, a batch stream editor
+    gnutar # GNU implementation of the `tar' archiver
+    gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
+    neofetch # Fast, highly customizable system info script
+    nnn #  Small ncurses-based file browser forked from noice
+    ripgrep # Utility that combines the usability of The Silver Searcher with the raw speed of grep
+    stow # Tool for managing the installation of multiple software packages in the same run-time directory tree
+    tree # Command to produce a depth indented directory listing
     wget
+    which # Shows the full path of (shell) commands
+    zstd # Zstandard real-time compression algorithm
+
+    # it provides the command `nom` works just like `nix` with more details log output
+    nix-output-monitor # Processes output of Nix commands to show helpful and pretty information
+
+    # archives
+    p7zip # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
+    unzip # Extraction utility for archives compressed in .zip format
+    xz # General-purpose data compression software, successor of LZMA
+    zip # Compressor/archiver for creating and modifying zipfiles
+
+    # Markdown, JSON, YAML procesors
+    glow # Render markdown on the CLI, with pizzazz!
+    jq # A lightweight and flexible command-line JSON processor
+    yq-go # Portable command-line YAML processor, https://github.com/mikefarah/yq
+
+    # monitors and tracers
+    btop # Monitor of resources, replacement of htop/nmon
+    iftop # Display bandwidth usage on a network interface
+    iotop # Tool to find out the processes doing the most IO
+    lsof # Tool to list open files
+    ltrace # Library call tracer
+    strace # System call tracer for Linux
+
+    # system tools
+    ethtool # Utility for controlling network drivers and hardware
+    lm_sensors # Tools for reading hardware sensors, for `sensors` command
+    pciutils # Collection of programs for inspecting and manipulating configuration of PCI devices, such as lspci
+    sysstat # Collection of performance monitoring tools for Linux (such as sar, iostat and pidstat)
+    usbutils # Tools for working with USB devices, such as lsusb
   ];
 
   # Allow unfree packages

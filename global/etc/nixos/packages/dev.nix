@@ -25,11 +25,13 @@
     enable = true;
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # Nix language server
-    nil
-    nixd
+    docker-compose # Docker CLI plugin to define and run multi-container applications with Docker
+    hoppscotch # Open source API development ecosystem, Postman Open-Source Alternative
+    nil # Yet another language server for Nix
+    nixd # Feature-rich Nix language server interoperating with C++ nix
+    nixpkgs-fmt # Nix code formatter for nixpkgs
+    saleae-logic-2
+    stm32cubemx
   ];
 }
