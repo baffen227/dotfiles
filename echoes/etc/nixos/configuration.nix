@@ -91,40 +91,107 @@
     };
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # system services
+  services = {
+    # Enable the X11 windowing system.
+    xserver = {
+      enable = true;
+      # Display Manager
+      displayManager = {
+        # Gnome's display manager
+        gdm.enable = true;
+        # Tweak to make Display Link docks accept more monitors
+        #sessionCommands = ''
+        #  xrandr --setprovideroutputsource 2 0
+        #'';
+      };
+      # Enable the GNOME Desktop Environment.
+      desktopManager.gnome.enable = true;
+      # DisplayLink Dock compatibility
+      #videoDrivers = [
+      #  "displaylink"
+      #  "modesetting"
+      #];
+      # Keyboard Layout
+      xkb.layout = "us";
+      xkb.variant = "";
+    };
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+    # Enable CUPS to print documents.
+    printing = {
+      enable = true;
+      drivers = [
+        pkgs.foomatic-db
+        pkgs.foomatic-db-ppds
+      ];
+    };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    # Pipewire sound server
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+
+      # use the example session manager (no others are packaged yet so this is enabled by default,
+      # no need to redefine it in your config for now)
+      #media-session.enable = true;
+    };
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    # libinput.enable = true;
+
+    # HTTP Server
+    #nginx = {
+    #  enable = true;
+    #  recommendedProxySettings = true;
+    #  recommendedTlsSettings = true;
+    #  # other Nginx options
+    #  virtualHosts."localhost.com" = {
+    #    #enableACME = true;
+    #    forceSSL = false;
+    #    locations."/" = {
+    #      proxyPass = "http://127.0.0.1:8080";
+    #      proxyWebsockets = true; # needed if you need to use WebSocket
+    #      extraConfig =
+    #        # required when the target is also TLS server with multiple hosts
+    #        "proxy_ssl_server_name on;"
+    #        +
+    #          # required when the server wants to use HTTP Authentication
+    #          "proxy_pass_header Authorization;";
+    #    };
+    #  };
+    #};
+
+    # This setups a SSH server. Very important if you're setting up a headless system.
+    # Feel free to remove if you don't need it.
+    #openssh = {
+    #  enable = true;
+    #  settings = {
+    #    # Opinionated: forbid root login through SSH.
+    #    PermitRootLogin = "no";
+    #    # Opinionated: use keys only.
+    #    # Remove if you want to SSH using passwords
+    #    PasswordAuthentication = false;
+    #  };
+    #};
+
+    udev.packages = [
+      # Used to set udev rules to access ST-LINK devices from probe-rs
+      pkgs.openocd
+    ];
+
+    # Add a udev rule to connect CANable for updating its firmware
+    udev.extraRules = ''
+      SUBSYSTEMS=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE:="0666"
+    '';
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bagfen = {
