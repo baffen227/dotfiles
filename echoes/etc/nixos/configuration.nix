@@ -193,18 +193,39 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
+  # Virtualization (Containers and VMs)
+  virtualisation = {
+    containers.enable = true;
+    docker.enable = true;
+  };
+
+  # Enable Saleao Logic Analyzer support
+  hardware.saleae-logic = {
+    enable = true;
+  };
+
+  programs = {
+    # Install firefox.
+    firefox.enable = true;
+
+    # Enable appimage-run wrapper script and binfmt registration
+    appimage = {
+      # Whether to enable appimage-run wrapper script for executing appimages on NixOS.
+      enable = true;
+      # Whether to enable binfmt registration to run appimages via appimage-run seamlessly.
+      binfmt = true;
+    };
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bagfen = {
     isNormalUser = true;
     description = "bagfen";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+    # Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
+    # Dialout group is used for USB serial coms: https://nixos.wiki/wiki/Serial_Console
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -229,12 +250,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
