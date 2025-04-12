@@ -9,7 +9,7 @@ sudo mv /etc/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration_
 
 # How to make it work?
 ```bash
-sudo stow -d ~/dotfiles --dotfiles --target / echoes
+sudo stow -d ~/dotfiles --dotfiles --target / <hostname>
 ```
 
 
@@ -34,15 +34,25 @@ sudo nix-channel --update && sudo nixos-rebuild switch --upgrade && sudo nix-col
 
 # Removing the symlinks is as simple as:
 ```bash
-sudo stow -D -d ~/dotfiles --dotfiles --target / echoes
+sudo stow -D -d ~/dotfiles --dotfiles --target / <hostname>
 ```
 
-# Host `echoes` is the laptop "Dell Vostro 5410".
-![image](https://github.com/user-attachments/assets/0436c971-236b-41be-ad7b-fc13cdfaa38b)
+---
+# Hosts
 
+## Host `echoes` is the laptop "Dell Vostro 5410".
+![image](https://github.com/user-attachments/assets/0436c971-236b-41be-ad7b-fc13cdfaa38b)
 
 ## [Echoes](https://jojo.fandom.com/wiki/Echoes) is the Stand of Koichi Hirose, featured primarily in Diamond is Unbreakable and appearing briefly in Vento Aureo. 
 ![image](https://github.com/user-attachments/assets/debedb99-b846-44cf-b237-5bb3634b99ba)
+
+
+## Host `crazy-diamond` is the laptop "Lenovo ThinkPad P16v".
+![image](https://github.com/user-attachments/assets/c7b56451-5142-4e99-a1f0-2841d215b4f4)
+
+## [Crazy Diamond](https://jojo.fandom.com/wiki/Crazy_Diamond) is the Stand of Josuke Higashikata, featured in Diamond is Unbreakable.
+![image](https://github.com/user-attachments/assets/c6f84d00-cbf6-4344-a20a-15f351798911)
+
 
 
 # References
