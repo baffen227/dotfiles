@@ -24,6 +24,11 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/run/media/bagfen/Backup" =
+    { device = "/dev/disk/by-uuid/38f8fb87-1a74-430c-a1cd-5f729794c57f";
+      fsType = "ext4";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
