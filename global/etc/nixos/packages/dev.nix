@@ -28,6 +28,7 @@
   environment.systemPackages = with pkgs; [
     docker-compose # Docker CLI plugin to define and run multi-container applications with Docker
     hoppscotch # Open source API development ecosystem, Postman Open-Source Alternative
+    lazygit # Simple terminal UI for git commands
     nil # Yet another language server for Nix
     nixd # Feature-rich Nix language server interoperating with C++ nix
     nixpkgs-fmt # Nix code formatter for nixpkgs
