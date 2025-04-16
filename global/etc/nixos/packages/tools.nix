@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # ===== Browser =====
-    chromium
+    #chromium
 
     # ===== Communication =====
     element-desktop
