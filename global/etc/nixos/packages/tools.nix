@@ -16,6 +16,7 @@
     # ===== Terminal =====
     #alacritty
     #alacritty-theme
+    ghostty # Fast, native, feature-rich terminal emulator pushing modern features
 
     # ===== Media =====
     vlc
