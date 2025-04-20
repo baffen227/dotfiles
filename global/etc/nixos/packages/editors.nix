@@ -4,7 +4,6 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    vim
     neovim
     unstable_pkgs.zed-editor
 

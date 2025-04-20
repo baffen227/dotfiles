@@ -3,8 +3,8 @@
 {
   imports = [
     ./common.nix
-    ./dev.nix
-    ./editors.nix
+    #./dev.nix
+    #./editors.nix
     ./fonts.nix
     ./gnome.nix
     ./tools.nix
