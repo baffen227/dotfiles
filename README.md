@@ -9,7 +9,10 @@ sudo mv /etc/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration_
 
 # How to make it work?
 ```bash
-sudo stow -d ~/dotfiles --dotfiles --target / <hostname>
+cd ~/dotfiles
+sudo stow -d ~/dotfiles --dotfiles --target / echoes
+or
+sudo stow -d ~/dotfiles --dotfiles --target / crazy-diamond
 ```
 
 
