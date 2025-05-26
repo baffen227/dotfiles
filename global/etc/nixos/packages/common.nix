@@ -146,6 +146,7 @@
     # archives
     p7zip # New p7zip fork with additional codecs and improvements (forked from https://sourceforge.net/projects/p7zip/)
     unzip # Extraction utility for archives compressed in .zip format
+    rar # Utility for RAR archives
     xz # General-purpose data compression software, successor of LZMA
     zip # Compressor/archiver for creating and modifying zipfiles
 
