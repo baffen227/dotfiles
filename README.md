@@ -26,6 +26,10 @@ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.ta
 # for unstable zeditor
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 
+# for upgrading to NixOS 25.05
+sudo nix-channel --add https://nixos.org/channels/nixos-25.05 nixos
+sudo nix-channel --list
+
 sudo nix-channel --update
 ```
 
