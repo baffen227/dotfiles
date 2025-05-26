@@ -15,7 +15,7 @@
       noto-fonts-emoji-blob-bin
       source-code-pro
       font-awesome
-      (nerdfonts.override { fonts = [ "Hack" ]; })
+      nerd-fonts.hack
     ];
     fontconfig = {
       defaultFonts = {

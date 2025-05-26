@@ -34,7 +34,7 @@
 
     # ===== System Tools =====
     gparted # Graphical disk partitioning tool
-    ventoy-full # New Bootable USB Solution
+    #ventoy-full # New Bootable USB Solution
     mkcert # Simple tool for making locally-trusted development certificates
     xorg.xeyes # Used to check if an app is using Xwayland or Wayland
 
