@@ -5,7 +5,8 @@ in
 {
   environment.systemPackages = with pkgs; [
     neovim
-    unstable_pkgs.zed-editor
+    #unstable_pkgs.zed-editor
+    zed-editor
 
     (unstable_pkgs.vscode-with-extensions.override {
       vscode = unstable_pkgs.vscodium;
