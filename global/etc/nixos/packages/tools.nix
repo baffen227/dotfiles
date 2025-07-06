@@ -19,15 +19,16 @@
     ghostty # Fast, native, feature-rich terminal emulator pushing modern features
 
     # ===== Media =====
-    vlc
     ffmpeg
     flameshot # Powerful yet simple to use screenshot software
+    foliate # Simple and modern GTK eBook reader
     #obs-studio # Free and open source software for video recording and live streaming
     #gimp-with-plugins # GNU Image Manipulation Program
     #libsForQt5.kdenlive # Video editor
     #inkscape-with-extensions # Vector graphics editor
     libreoffice-fresh # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     #steam
+    vlc
 
     # ===== Networking =====
     #wireshark
