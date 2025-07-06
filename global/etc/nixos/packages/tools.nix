@@ -21,6 +21,7 @@
     # ===== Media =====
     vlc
     ffmpeg
+    flameshot # Powerful yet simple to use screenshot software
     #obs-studio # Free and open source software for video recording and live streaming
     #gimp-with-plugins # GNU Image Manipulation Program
     #libsForQt5.kdenlive # Video editor
