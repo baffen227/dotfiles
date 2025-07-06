@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // The name of a font to use for rendering text in the editor
   "agent": {
     "model_parameters": [],
     "default_model": {
@@ -28,6 +27,8 @@
   "vim_mode": true,
   "relative_line_numbers": true,
   "languages": {
+    // For Nix language, only use Nixd language server
+    // Ref: https://github.com/zed-extensions/nix
     "Nix": { "language_servers": ["nixd", "!nil"] }
   },
   "lsp": {
