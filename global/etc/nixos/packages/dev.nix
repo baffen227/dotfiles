@@ -37,6 +37,7 @@ in
     hoppscotch # Open source API development ecosystem, Postman Open-Source Alternative
     nil # Yet another language server for Nix
     nixd # Feature-rich Nix language server interoperating with C++ nix
+    nixfmt-rfc-style # Official formatter for Nix code
     nixpkgs-fmt # Nix code formatter for nixpkgs
     saleae-logic-2
     stm32cubemx
