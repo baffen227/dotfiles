@@ -1,5 +1,11 @@
 { pkgs, ... }:
-
+let
+  unstable_pkgs = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
+in
 {
   # system services
   services = {
@@ -26,6 +32,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    unstable_pkgs.claude-code # Agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster
     docker-compose # Docker CLI plugin to define and run multi-container applications with Docker
     hoppscotch # Open source API development ecosystem, Postman Open-Source Alternative
     nil # Yet another language server for Nix
