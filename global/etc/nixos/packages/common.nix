@@ -135,7 +135,6 @@
     ripgrep # Utility that combines the usability of The Silver Searcher with the raw speed of grep
     stow # Tool for managing the installation of multiple software packages in the same run-time directory tree
     tree # Command to produce a depth indented directory listing
-    vim
     wget
     which # Shows the full path of (shell) commands
     zstd # Zstandard real-time compression algorithm
