@@ -75,6 +75,9 @@
         nnoremap <leader>g :Telescope live_grep<CR>
         nnoremap <leader>b :Telescope buffers<CR>
 
+        " TODO: Claude Code keymaps
+        " nnoremap <leader>cc :ClaudeCode<CR>
+
         lua << EOF
           -- nvim-tree setup
           require("nvim-tree").setup()
@@ -102,6 +105,9 @@
 
           -- which-key setup
           require("which-key").setup()
+
+          -- TODO: claude-code setup
+          -- require("claude-code").setup()
 
           -- catppuccin setup
           require("catppuccin").setup()
@@ -177,6 +183,9 @@
           nvim-autopairs
           indent-blankline-nvim
           which-key-nvim
+
+          # TODO: Claude Code integration
+          # claude-code-nvim
         ];
       };
     };
