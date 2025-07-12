@@ -15,28 +15,22 @@
 - [ ] 新增 `[tag]` 配置區塊
 - [ ] 考慮使用 GitHub noreply email 保護隱私
 
-### 2. Vim 配置增強 (`global/home/bagfen/dot-vimrc`)
-- [ ] 新增插件管理系統（如 vim-plug）
-- [ ] 新增色彩主題配置
-- [ ] 新增更多便捷功能和快捷鍵
-- [ ] 新增文件類型特定設定
-
-### 3. NixOS 配置清理 (`crazy-diamond/etc/nixos/configuration.nix`)
+### 2. NixOS 配置清理 (`crazy-diamond/etc/nixos/configuration.nix`)
 - [ ] 清理註釋掉的服務配置
 - [ ] 將大型配置區塊組織到獨立文件
 - [ ] 新增更詳細的註釋說明
 
-### 4. 版本控制改進
+### 3. 版本控制改進
 - [ ] 新增 `.gitignore` 文件
 - [ ] 忽略敏感資訊和暫存檔案
 - [ ] 新增 pre-commit hooks
 
-### 5. 自動化改進
+### 4. 自動化改進
 - [ ] 新增 `install.sh` 腳本自動化安裝
 - [ ] 考慮新增 `Makefile` 簡化操作
 - [ ] 新增系統依賴檢查腳本
 
-### 6. 安全性改進
+### 5. 安全性改進
 - [ ] 檢查並移除敏感資訊
 - [ ] 新增敏感文件的範本版本
 - [ ] 考慮使用環境變數管理敏感配置
@@ -49,9 +43,8 @@
 3. 新增自動化安裝腳本
 
 ### 中優先級
-1. 增強 Vim 配置
-2. 清理 NixOS 配置
-3. 新增更多自動化工具
+1. 清理 NixOS 配置
+2. 新增更多自動化工具
 
 ### 低優先級
 1. 新增 pre-commit hooks
