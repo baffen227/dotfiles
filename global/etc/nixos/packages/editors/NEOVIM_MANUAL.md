@@ -1,6 +1,6 @@
 # Neovim Configuration Manual
 
-This manual documents the Neovim configuration defined in `global/etc/nixos/packages/editors/neovim.nix`.
+This manual documents the Neovim configuration defined in `global/etc/nixos/packages/editors/neovim/`.
 
 ## Overview
 
