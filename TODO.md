@@ -10,10 +10,13 @@
 ## 改進建議
 
 ### 1. Git 配置改進 (`global/home/bagfen/dot-gitconfig`)
-- [ ] 新增 GPG 簽名設置
-- [ ] 新增 `[commit]` 配置區塊
-- [ ] 新增 `[tag]` 配置區塊
-- [ ] 考慮使用 GitHub noreply email 保護隱私
+- [x] 新增實用的 Git 別名 (st, co, br, lg 等)
+- [x] 新增 `[core]` 配置區塊 (editor, autocrlf, quotepath)
+- [x] 新增 `[push]` 和 `[pull]` 安全預設值
+- [x] 新增 `[diff]` 和 `[merge]` 工具配置 (vimdiff)
+- [x] 新增顏色配置改善可讀性
+- [x] 設定 `defaultBranch = main`
+- [x] 配置已測試並驗證功能正常
 
 ### 2. NixOS 配置清理 (`crazy-diamond/etc/nixos/configuration.nix`)
 - [ ] 清理註釋掉的服務配置
@@ -39,7 +42,7 @@
 
 ### 高優先級
 1. 新增 `.gitignore` 文件
-2. 改進 Git 配置的隱私設定
+2. ~~改進 Git 配置的隱私設定~~ ✅ 已完成
 3. 新增自動化安裝腳本
 
 ### 中優先級
